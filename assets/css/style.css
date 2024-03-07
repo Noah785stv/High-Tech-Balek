@@ -32,12 +32,17 @@ body {
     width: 7em;
     height: 7em;
     border-radius: 50%;
-}
-#logo{
+    cursor: pointer;
+  }
+  #logo{
     z-index: 99;
-}
-#logoContainer img {
+  }
+  #logoContainer img {
+  transition: .2s;
     width: 100%;
+}
+#logoContainer img:hover {
+  scale: 1.2 1.2;
 }
 #nav-1 ul li {
     list-style: none;
@@ -117,32 +122,45 @@ body {
 .container-concept {
   margin-top: 10vh;
 }
+#footerContainer-0 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 2em;
+  margin-right: 5%;
+}
 #footerContainer-1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 10%;
+  margin-right: 5%;
 }
 
 .teamTitle {
   margin-bottom: 5%;
 }
-
-.cards {
-  margin-left: 25%;
-  margin-right: 25%;
+#containerPhoto {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.cards {
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 35%;
+  width: 100%;
+  gap: 5%;
 }
 
 .card {
-  display: grid;
-  grid-template-rows: max-content 200px 1fr;
-  margin-bottom: 10%;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 5%;
 }
-
+.robin_card {
+  width: 300px;
+  height: 300px;
+}
 .card img {
   object-fit: cover;
   width: 100%;
@@ -690,7 +708,7 @@ footer {
   .animated-button svg {
     position: absolute;
     width: 24px;
-    fill: #1479EA;
+    fill: #fff;
     z-index: 9;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
@@ -766,7 +784,10 @@ a {
 
 /* Carroussel des photos */
 
-  
+#photoContainer {
+  margin-bottom: 25vh;
+}
+
 /* le framework de Noah */
 .txt-ctr {
     text-align: center;
@@ -810,30 +831,73 @@ a {
     border-radius: 3em;
     gap: 12px;
   }
+  .card {
+    margin-bottom: 15%;
+  }
 }
 
-@media screen and (max-width: 425px) {
-    .pAPropos {
-        max-width: 60%;
-        z-index: 5;
-        text-align: left;
-    }
-    .animationCool {
-        position: absolute;
-        left: 35%;
-        top: 45%;
-        z-index: 0;
-    }
-    .titrePage {
-        margin-top: 30%;
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        font-style: bold;
-        font-size: 3.5em;
-    }
-    .btn-content {
-        font-size: 150px;
-        border-radius: 0px;
-        padding-bottom: 220px;
-      }
+@media screen and (max-width: 426px) {
+  .pAPropos {
+    max-width: 60%;
+    z-index: 5;
+    text-align: left;
+  }
+  .animationCool {
+    position: absolute;
+    left: 35%;
+    top: 45%;
+    z-index: 0;
+  }
+  .titrePage {
+    margin-top: 30%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 3.5em;
+  }
+  .btn-content {
+    font-size: 150px;
+    border-radius: 0px;
+    padding-bottom: 220px;
+  }
+  #nav-1 ul{
+    top: 5em;
+    right: 1em;
+    justify-content: end;
+  }
+  .btn {
+    display: none;
+  }
+  #logoContainer {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    border-radius: 50%;
+    background: rgba(202, 6, 255, 0.17);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.8px);
+    -webkit-backdrop-filter: blur(5.8px);
+    border: 1px solid rgba(202, 6, 255, 0.3);
+    cursor: pointer;
+    margin-left: 25%;
+  }
+  #logoContainer img {
+    display: flex;
+    align-items: center;
+    transition: .2s;
+    width: 100%;
+  }
+  #robin_pp {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  #arrowBottom {
+      margin-top: 30vh;
+  }
+  .cardPP {
+    margin-left: 20%;
+  }
+  .titrePage {
+    text-align: center;
+  }
 }
