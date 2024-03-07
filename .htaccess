@@ -1,0 +1,8 @@
+Options -Indexes
+
+#Active le moteur de réécriture
+RewriteEngine on
+RewriteBase /
+
+ErrorDocument 404 http://localhost:8000
+ErrorDocument 403 http://localhost:8000
